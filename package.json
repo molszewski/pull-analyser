@@ -27,5 +27,8 @@
         "grunt": "latest",
         "load-grunt-tasks": "latest",
         "grunt-jasmine-node": "~0.2.1"
+    },
+    "scripts": {
+        "test": "grunt test"
     }
 }
