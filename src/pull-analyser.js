@@ -4,11 +4,11 @@
 (function (undefined) {
 
     var VERSION = '0.1.0';
-    var pull_analyser = function() {
+    var pullAnalyser = function() {
         // empty for now
     };
-    pull_analyser.VERSION = VERSION;
+    pullAnalyser.VERSION = VERSION;
 
     // NodeJS
-    module.exports = pull_analyser;
+    module.exports = pullAnalyser;
 }).call(this);
