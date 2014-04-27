@@ -1,11 +1,11 @@
 //     pull-analyser.js 0.1.0
 //     (c) 2014 Michal Olszewski
 //     pull-analyser may be freely distributed under the MIT license.
+"use strict";
 
 (function (undefined) {
-    "use strict";
-
     var VERSION = '0.1.0';
+
     var pullAnalyser = function() {
         // empty for now
     };
@@ -13,4 +13,4 @@
 
     // NodeJS
     module.exports = pullAnalyser;
-}).call(this);
+}());
