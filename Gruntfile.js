@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -28,7 +30,7 @@ module.exports = function (grunt) {
                 "nonbsp": true,
                 "nonew": true,
                 "plusplus": true,
-                "strict": false,
+                "strict": true,
                 "trailing": true,
                 "undef": true,
                 "unused": true,
