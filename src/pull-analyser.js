@@ -16,15 +16,14 @@
         return pullRequestDate.substring(0, 10);
     };
 
-    pullAnalyser.analyseClosed = function(pullRequests) {
-
-        var mapping = _.chain(pullRequests)
-            .pluck('closed_at')
-            .filter(function(closedAt) {
-                return _.isString(closedAt);
+    var createDateHistogram = function(pullRequests, dateTimePropertyName) {
+        return _.chain(pullRequests)
+            .pluck(dateTimePropertyName)
+            .filter(function(dateTimeProperty) {
+                return _.isString(dateTimeProperty);
             })
-            .map(function(closedAt) {
-                return extractDate(closedAt);
+            .map(function(dateTimeProperty) {
+                return extractDate(dateTimeProperty);
             })
             .reduce(function(memo, date) {
                 if (!_.isNumber(memo[date])) {
@@ -35,8 +34,14 @@
                 return memo;
             }, {})
             .value();
+    };
 
-        return mapping;
+    pullAnalyser.analyseClosed = function(pullRequests) {
+        return createDateHistogram(pullRequests, 'closed_at');
+    };
+
+    pullAnalyser.analyseMerged = function(pullRequests) {
+        return createDateHistogram(pullRequests, 'merged_at');
     };
 
     // NodeJS
