@@ -36,4 +36,18 @@ describe("Merged pull requests are analysed", function () {
 
         expect(result).toEqual({});
     });
+
+    it("should filter undefined pull requests", function () {
+        var result = pullAnalyser.analyseMerged(undefined);
+
+        expect(result).toEqual({});
+    });
+
+    it("should filter non-list pull requests", function () {
+        var result = pullAnalyser.analyseMerged({
+            "closed_at": "2014-04-11"
+        });
+
+        expect(result).toEqual({});
+    });
 });

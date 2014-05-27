@@ -36,4 +36,18 @@ describe("Closed pull requests are analysed", function () {
 
         expect(result).toEqual({});
     });
+
+    it("should filter undefined pull requests", function () {
+        var result = pullAnalyser.analyseClosed(undefined);
+
+        expect(result).toEqual({});
+    });
+
+    it("should filter non-list pull requests", function () {
+        var result = pullAnalyser.analyseClosed({
+            "closed_at": "2014-04-11"
+        });
+
+        expect(result).toEqual({});
+    });
 });
