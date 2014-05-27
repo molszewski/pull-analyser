@@ -1,35 +1,38 @@
 {
-  "name": "pull-analyser",
-  "version": "0.1.0",
-  "description": "Parse and analyse pull requests from your GitHub repository",
-  "homepage": "https://github.com/molszewski/pull-analyser",
-  "author": "Michal Olszewski (https://github.com/molszewski)",
-  "contributors": [],
-  "keywords": [
-    "pull",
-    "request",
-    "GitHub"
-  ],
-  "main": "./pull-analyser.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/molszewski/pull-analyser.git"
-  },
-  "bugs": {
-    "url": "https://github.com/molszewski/pull-analyser/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT"
+    "name": "pull-analyser",
+    "version": "0.1.0",
+    "description": "Parse and analyse pull requests from your GitHub repository",
+    "homepage": "https://github.com/molszewski/pull-analyser",
+    "author": "Michal Olszewski (https://github.com/molszewski)",
+    "contributors": [],
+    "keywords": [
+        "pull",
+        "request",
+        "GitHub"
+    ],
+    "main": "./pull-analyser.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/molszewski/pull-analyser.git"
+    },
+    "bugs": {
+        "url": "https://github.com/molszewski/pull-analyser/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ],
+    "devDependencies": {
+        "grunt": "latest",
+        "load-grunt-tasks": "latest",
+        "grunt-jasmine-node": "~0.2.1",
+        "grunt-contrib-jshint": "~0.10.0"
+    },
+    "dependencies": {
+        "underscore": "~1.6.0"
+    },
+    "scripts": {
+        "test": "grunt test"
     }
-  ],
-  "devDependencies": {
-    "grunt": "latest",
-    "load-grunt-tasks": "latest",
-    "grunt-jasmine-node": "~0.2.1",
-    "grunt-contrib-jshint": "~0.10.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  }
 }
